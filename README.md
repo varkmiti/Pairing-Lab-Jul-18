@@ -25,7 +25,7 @@ The endpoints you will need are:
 
 In this challenge, we're going to work on Raffy's Amazon trip page and give our users the ability to:
 
-- See information about a traveler including their name, nickname, and number of likes when the page loads
+- See information about a traveler including their image, name, nickname, and number of likes when the page loads
 - See all their animal sightings when the page loads
 - Add a new animal sighting (no persistance needed)
 - Click on the heart button to increase the number of likes for the traveler profile and still see the updated likes when I reload the page
