@@ -1,4 +1,4 @@
-# JS Mini Challenge: Event Handling
+# JS Mini Challenge
 
 
 ## Setup
