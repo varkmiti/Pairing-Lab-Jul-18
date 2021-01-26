@@ -1,29 +1,9 @@
 # JS Mini Challenge: Event Handling
 
-*This Lab Lovingly Stolen From [Ian Hollander](https://github.com/ihollander)*
-
-## Instructions
-
-Fork this repo, then run `git clone` to download your fork locally. Then `cd` into the downloaded directory and open it in your text editor with `code .`.
-
-## Submitting
-
-When you’re finished, run the following commands in your terminal to submit:
-
-```
-git add .
-git commit -m 'Done'
-git push
-```
-
-To get feedback on your code, make a [pull request from your forked repo](https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request-from-a-fork). If you worked with a partner, you can tag your partner on the pull request.
-
-_________________________
-
 
 ## Setup
 
-- Fork and clone this repository if you haven't already
+- Fork this repo, then run `git clone` to download your fork locally. Then `cd` into the downloaded directory and open it in your text editor with `code .`.
 - Run `json-server --watch db.json --routes routes.json` to get the backend started
 - Open the `index.html` file on your browser
 
