@@ -17,6 +17,8 @@ The endpoints you will need are:
 - PATCH `/travelers/1`
 - GET `/animalSightings`
 - POST `/animalSightings`
+- PATCH `/animalSightings/:id`
+- DELETE `/animalSightings/:id`
 
 
 ## Assignment
@@ -30,6 +32,14 @@ In this challenge, we're going to work on Raffy's Amazon trip page and give our 
 - Toggle the header color between black and green
 
 
+## Advanced Deliverables
+- Persist the new animal sightings
+  - Your animal sighting object must have a `travelerId` key with a value of `1` for it to work
+- Add a like button to each sighting and implement a like feature that persists
+- Add a delete button to each sighting and implement a delete feature that persists
+
+__________
+
 There's a section in this Readme file for your notes on each deliverable. As you go through the deliverables, write down some notes in this file on how you solved each problem. It'll help reinforce what you learned and give you a head start next time you see a similar problem.
 
 ## Deliverable 1: Show traveler info upon page load
@@ -40,12 +50,16 @@ There's a section in this Readme file for your notes on each deliverable. As you
 
 ```
 
+
 ## Deliverable 2: Show animal sightings upon page load
 
 **YOUR NOTES**
 ```
 
 ```
+
+
+
 
 ## Deliverable 3: Add a new animal sighting
 
@@ -54,6 +68,9 @@ There's a section in this Readme file for your notes on each deliverable. As you
 
 ```
 
+
+
+
 ## Deliverable 4: Increase likes
 
 **YOUR NOTES**
@@ -61,7 +78,38 @@ There's a section in this Readme file for your notes on each deliverable. As you
 
 ```
 
+
+
+
 ## Deliverable 5: Toggle header color
+
+**YOUR NOTES**
+```
+
+```
+
+
+
+__________
+
+## Advanced Deliverable 1: Persist new animal sightings
+
+**YOUR NOTES**
+```
+
+```
+
+
+## Advanced Deliverable 2: Like a new animal sighting
+
+**YOUR NOTES**
+```
+
+```
+
+
+
+## Advanced Deliverable 3: Delete an animal sighting
 
 **YOUR NOTES**
 ```
