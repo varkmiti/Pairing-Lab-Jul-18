@@ -4,7 +4,7 @@
 ## Setup
 
 - Fork this repo, then run `git clone` to download your fork locally. Then `cd` into the downloaded directory and open it in your text editor with `code .`.
-- Run `json-server --watch db.json --routes routes.json` to get the backend started
+- Run `json-server --watch db.json` to get the backend started
 - Open the `index.html` file on your browser
 
 ## Endpoints
@@ -27,14 +27,13 @@ In this challenge, we're going to work on Raffy's Amazon trip page and give our 
 
 - See information about a traveler including their image, name, nickname, and number of likes when the page loads
 - See all their animal sightings when the page loads
-- Add a new animal sighting (no persistance needed)
+- Add a new animal sighting
+  - Your animal sighting object must have a `travelerId` key with a value of `1` for it to work
 - Click on the heart button to increase the number of likes for the traveler profile and still see the updated likes when I reload the page
 - Toggle the header color between black and green
 
 
-## Advanced Deliverables
-- Persist the new animal sightings
-  - Your animal sighting object must have a `travelerId` key with a value of `1` for it to work
+## Advanced Deliverables  
 - Add a like button to each sighting and implement a like feature that persists
 - Add a delete button to each sighting and implement a delete feature that persists
 
