@@ -4,6 +4,9 @@ const form = document.querySelector('form#new-animal-sighting-form')
 const pLikes = document.querySelector('div#profile p.likes')
 const likeBtn = document.querySelector('button.like-button')
 
+
+/********* Render Functions *********/
+
 function renderOneSighting(sighting) {
     const li = document.createElement('li')
     li.dataset.id = sighting.id
@@ -18,32 +21,33 @@ function renderOneSighting(sighting) {
     animalsUl.append(li)
 }
 
+function renderTraveler() {
+    fetch('http://localhost:3000/travelers/1')
+        .then(res => res.json())
+        .then(trvlrObj => {
+            const img = document.querySelector('div#profile img')
+            img.src = trvlrObj.photo
+            img.alt = trvlrObj.name
 
-fetch('http://localhost:3000/travelers/1')
-    .then(res => res.json())
-    .then(trvlrObj => {
-        const img = document.querySelector('div#profile img')
-        img.src = trvlrObj.photo
-        img.alt = trvlrObj.name
+            const h2 = document.querySelector('div#profile h2')
+            h2.textContent = trvlrObj.name
 
-        const h2 = document.querySelector('div#profile h2')
-        h2.textContent = trvlrObj.name
-
-        const em = document.querySelector('div#profile em')
-        em.textContent = trvlrObj.nickname
-        pLikes.textContent = `${trvlrObj.likes} Likes`
-    })
-
-
-fetch('http://localhost:3000/animalSightings')
-    .then(res => res.json())
-    .then(animalSightingsArr => {
-
-        animalSightingsArr.forEach(sighting => renderOneSighting(sighting))
-    })
+            const em = document.querySelector('div#profile em')
+            em.textContent = trvlrObj.nickname
+            pLikes.textContent = `${trvlrObj.likes} Likes`
+        })
+}
 
 
-form.addEventListener('submit', event => {
+function renderAllSightings() {
+    fetch('http://localhost:3000/animalSightings')
+        .then(res => res.json())
+        .then(animalSightingsArr => animalSightingsArr.forEach(sighting => renderOneSighting(sighting)))
+}
+
+/********* Event Listener Callbacks *********/
+
+function handleSubmit(event) {
     event.preventDefault()
     // using the name attribute
     // const species = event.target.species.value
@@ -75,10 +79,10 @@ form.addEventListener('submit', event => {
     })
         .then(res => res.json())
         .then(sighting => renderOneSighting(sighting))
-})
+}
 
 
-likeBtn.addEventListener('click', () => {
+function handleLikeClick() {
     const currLikes = parseInt(pLikes.textContent)
     const newLikes = currLikes + 1
     pLikes.textContent = `${newLikes} Likes`
@@ -96,4 +100,14 @@ likeBtn.addEventListener('click', () => {
         .then(updatedTrvlr => {
             console.log(updatedTrvlr)
         })
-})
+}
+
+/********* Event Listeners *********/
+
+form.addEventListener('submit', handleSubmit)
+likeBtn.addEventListener('click', handleLikeClick)
+
+
+/********* APP INIT *********/
+renderTraveler()
+renderAllSightings()
