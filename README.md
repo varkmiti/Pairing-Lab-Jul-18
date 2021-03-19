@@ -53,7 +53,7 @@ When the page loads, the information about the traveler should display including
 
 ## Deliverable 2: Show animal sightings upon page load
 
-When the page loads, each animal sighting of the travler should appear on the page in the `ul#collection` section. Each animal sighting should look like:
+When the page loads, each animal sighting of the travler should appear on the page in the `ul#animals` section. Each animal sighting should look like:
 
 ```html
 <li data-id='{id here}'>
